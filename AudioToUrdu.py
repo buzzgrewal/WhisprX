@@ -5,7 +5,7 @@ import textwrap
 import os
 
 def transcribe_audio(audio_path):
-    model = whisper.load_model("turbo")
+    model = whisper.load_model("tiny.en")
     result = model.transcribe(audio_path)
     return result["text"], result
 
@@ -34,13 +34,13 @@ if uploaded_file is not None:
     st.audio(audio_path, format="audio/mp3")
 
     with st.spinner("Transcribing..."):
-        model = whisper.load_model("turbo")
+        model = whisper.load_model("tiny.en")
         transcribed_text, result = transcribe_audio(audio_path)
-        detected_lang = detect_language(model, audio_path)
+        # detected_lang = detect_language(model, audio_path)
 
     st.subheader("Transcribed Text:")
     st.text_area("", transcribed_text, height=150)
-    st.write(f"**Detected Language:** {detected_lang}")
+    # st.write(f"**Detected Language:** {detected_lang}")
 
     with st.spinner("Translating to Urdu..."):
         urdu_translation = translate_to_urdu(transcribed_text)
