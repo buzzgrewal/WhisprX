@@ -1,6 +1,5 @@
 # WhisprX: AI-Powered Speech-to-Urdu
 <a name="readme-top"></a>
-## WhisprX
 <p>I recently built a Streamlit app that leverages OpenAI’s Whisper for automatic speech-to-text transcription and Deep Translator for Urdu translation. The app allows users to upload audio files (MP3, WAV, M4A), transcribes the speech with high accuracy, detects the spoken language, and provides an instant Urdu translation. This project highlights the power of AI in multilingual accessibility, making speech recognition more inclusive and useful for diverse audiences. Excited to explore more applications of NLP and speech processing in real-world scenarios! 🚀</p>
 
 
